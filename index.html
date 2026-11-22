@@ -46,7 +46,7 @@ a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit;c
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 .trust{margin-top:34px;display:flex;gap:26px;flex-wrap:wrap;color:var(--muted);font-size:12px}.trust b{color:var(--gold2);font-size:22px;display:block;font-family:var(--serif)}
 /* search */
-.sbox{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr auto;gap:10px;background:var(--panel);padding:14px;border:1px solid var(--line);border-radius:18px;margin-top:-48px;position:relative;z-index:3;box-shadow:0 20px 50px #0007}
+.sbox{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr auto;gap:10px;background:var(--panel);padding:14px;border:1px solid var(--line);border-radius:18px;margin:0 0 32px;box-shadow:0 10px 30px #0005}
 .sbox input,.sbox select,.fld{width:100%;background:#0f0c18;color:var(--cream);border:1px solid #ffffff1d;border-radius:10px;padding:12px 13px;min-width:0}
 .fld::placeholder,.sbox input::placeholder{color:#8f859d}
 section{padding:78px 0}
@@ -70,6 +70,14 @@ section{padding:78px 0}
 .empty{display:none;padding:34px;color:var(--muted);border:1px dashed var(--line);border-radius:14px;text-align:center}
 .skel{height:400px;border-radius:20px;background:linear-gradient(100deg,#1b1628 30%,#271f38 50%,#1b1628 70%);background-size:200% 100%;animation:sh 1.3s infinite}@keyframes sh{to{background-position:-200% 0}}
 .demo{font-size:12px;color:#c9bfd6;border:1px dashed #8e7a9f66;padding:11px 15px;border-radius:12px;margin-top:20px}
+/* elite layout additions */
+.scroll{position:absolute;z-index:3;left:50%;bottom:22px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}.scroll i{width:1px;height:34px;background:linear-gradient(var(--gold),transparent);animation:sc 1.6s infinite}@keyframes sc{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.statsbar{background:linear-gradient(120deg,#1d172b,#171222);border-block:1px solid var(--line)}.sgrid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;padding:26px 0;gap:10px}.sgrid b{display:block;font:700 30px var(--serif);color:var(--gold2)}.sgrid span{font-size:12px;color:var(--muted)}
+.amen{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}.amen span{font-size:11px;border:1px solid var(--line);border-radius:99px;padding:3px 10px;color:#e3dbea}
+.why{padding:26px;background:var(--panel);border:1px solid var(--line);border-radius:18px;text-align:center}.why .sico{margin:0 auto}.why h3{margin:14px 0 6px;font-size:17px}.why p{margin:0;color:var(--muted);font-size:14px}
+.whygrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.testi{max-width:780px;margin:auto;text-align:center}.testi blockquote{font:600 clamp(20px,3vw,28px)/1.45 var(--serif);margin:14px 0}.testi cite{color:var(--gold2);font-style:normal;font-size:14px}.testi cite small{display:block;color:var(--muted)}
+.cta{background:radial-gradient(ellipse at 50% 0%,#60452b66,transparent 65%),linear-gradient(145deg,#251c35,#171222);border-block:1px solid var(--line);text-align:center}.cta h2{font:700 clamp(28px,4vw,42px)/1.15 var(--serif);margin:0 0 10px}.cta p{color:var(--muted);margin:0 auto 24px;max-width:560px}
 /* services */
 .alt{background:linear-gradient(120deg,#1d172b,#171222);border-block:1px solid var(--line)}
 .service{padding:25px;background:var(--panel);border:1px solid var(--line);border-radius:18px}
@@ -110,8 +118,8 @@ footer{border-top:1px solid var(--line);padding:34px 0;background:#0b0911}.foot{
 .mside{display:grid;gap:10px;align-content:start}
 .desc{white-space:pre-line;color:#d9d0e1}
 /* responsive */
-@media(max-width:900px){.navlinks{display:none;position:absolute;top:74px;left:0;right:0;background:#171222;padding:20px;flex-direction:column;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.navr .btn{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sbox{grid-template-columns:1fr 1fr}.sbox .btn{grid-column:1/-1}.aboutgrid,.cgrid,.mcont{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.aboutvisual{min-height:290px}}
-@media(max-width:560px){.wrap{width:calc(100% - 28px)}.hero{min-height:600px}.hero-content{padding:70px 0 90px}.grid{grid-template-columns:1fr}.sbox{grid-template-columns:1fr;margin-top:-30px}section{padding:56px 0}.cbox{padding:22px 18px}.form .two{grid-template-columns:1fr}.bname small{display:none}.watip{display:none}.modal{padding:0}.mbox{margin:0;border-radius:0;min-height:100%}.mcont{padding:18px}}
+@media(max-width:900px){.whygrid{grid-template-columns:repeat(2,1fr)}.sgrid{grid-template-columns:repeat(2,1fr)}.navlinks{display:none;position:absolute;top:74px;left:0;right:0;background:#171222;padding:20px;flex-direction:column;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.navr .btn{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sbox{grid-template-columns:1fr 1fr}.sbox .btn{grid-column:1/-1}.aboutgrid,.cgrid,.mcont{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.aboutvisual{min-height:290px}}
+@media(max-width:560px){.whygrid{grid-template-columns:1fr}.scroll{display:none}.wrap{width:calc(100% - 28px)}.hero{min-height:600px}.hero-content{padding:70px 0 90px}.grid{grid-template-columns:1fr}.sbox{grid-template-columns:1fr}section{padding:56px 0}.cbox{padding:22px 18px}.form .two{grid-template-columns:1fr}.bname small{display:none}.watip{display:none}.navr{gap:6px}.navr .cur{padding:7px 8px;max-width:92px;font-size:12px}.sort{flex-wrap:wrap}.brand{gap:8px}.bname{font-size:12px;letter-spacing:.06em}.modal{padding:0}.mbox{margin:0;border-radius:0;min-height:100%}.mcont{padding:18px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
 
 /* ================= ADMIN ================= */
@@ -149,10 +157,10 @@ pre.code{background:#08060e;border:1px solid var(--line);border-radius:12px;padd
 <div id="site">
 <header class="hdr"><div class="wrap nav">
   <a class="brand" href="#home" aria-label="Home"><span class="mark brandlogo">E</span><span class="bname"><span data-t="name">Estate & Land</span><small data-t="tagline"></small></span></a>
-  <nav class="navlinks" id="navlinks"><a href="#listings">Properties</a><a href="#services">Services</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+  <nav class="navlinks" id="navlinks"><a href="#home" data-i18n="nav.home">Home</a><a href="#listings" data-i18n="nav.props">Properties</a><a href="#services" data-i18n="nav.services">Services</a><a href="#about" data-i18n="nav.about">About</a><a href="#faq" data-i18n="nav.faq">FAQ</a><a href="#contact" data-i18n="nav.contact">Contact</a></nav>
   <div class="navr">
-    <select class="cur" id="curSel" aria-label="Display currency"><option value="asListed">Price: as listed</option><option value="UGX">UGX (Shs)</option><option value="USD">USD ($)</option><option value="EUR">EUR (€)</option><option value="GBP">GBP (£)</option><option value="JPY">JPY (¥)</option></select>
-    <a class="btn sm" href="#contact">Enquire now ↗</a><button class="menu" id="menu" aria-label="Menu" aria-expanded="false">Menu</button>
+    <select class="cur" id="langSel" aria-label="Language"><option value="en">English</option><option value="lg">Luganda</option><option value="sw">Kiswahili</option><option value="fr">Français</option></select>
+    <a class="btn sm" href="#contact" data-i18n="nav.enquire">Enquire now ↗</a><button class="menu" id="menu" aria-label="Menu" aria-expanded="false" data-i18n="menu">Menu</button>
   </div>
 </div></header>
 
@@ -163,78 +171,89 @@ pre.code{background:#08060e;border:1px solid var(--line);border-radius:12px;padd
     <div class="eyebrow" data-t="tagline">Property • Real Estate • Investment</div>
     <h1 data-t="heroTitle">Find land and homes you can trust.</h1>
     <p data-t="heroSubtitle"></p>
-    <div class="actions"><a class="btn" href="#listings">Explore properties ↓</a><a class="btn wa" id="heroWa" href="#" target="_blank" rel="noopener"><svg class="ico-wa" viewBox="0 0 24 24"><use href="#waicon"/></svg> WhatsApp us</a></div>
-    <div class="trust" id="trust"></div>
+    <div class="actions"><a class="btn" href="#listings" data-i18n="hero.explore">Explore properties ↓</a><a class="btn wa" id="heroWa" href="#" target="_blank" rel="noopener"><svg class="ico-wa" viewBox="0 0 24 24"><use href="#waicon"/></svg> <span data-i18n="hero.wa">WhatsApp us</span></a></div>
   </div></div>
+<a class="scroll" href="#stats"><span data-i18n="scroll">Scroll</span><i></i></a>
 </section>
 
-<div class="wrap"><form class="sbox" id="searchForm" role="search">
-  <input id="fq" type="search" placeholder="Search location or property" aria-label="Search">
-  <select id="ftype" aria-label="Property type"><option value="">All property types</option><option>Land</option><option>House</option><option>Apartment</option><option>Commercial</option><option>Rental</option></select>
-  <select id="fpurpose" aria-label="Sale or rent"><option value="">Sale or rent</option><option>For sale</option><option>For rent</option></select>
-  <select id="fbudget" aria-label="Maximum budget"><option value="">Any budget (UGX)</option><option value="50000000">Up to 50M</option><option value="100000000">Up to 100M</option><option value="250000000">Up to 250M</option><option value="500000000">Up to 500M</option><option value="1000000000">Up to 1 Billion</option></select>
-  <button class="btn" type="submit">Search</button>
-</form></div>
+
+<div class="statsbar" id="stats"><div class="wrap sgrid" id="trust"></div></div>
 
 <section id="listings"><div class="wrap">
-  <div class="listhead"><div class="head"><div class="eyebrow">Featured opportunities</div><h2>Explore available properties</h2><p>Browse the catalogue and contact us for verified details, documentation and viewing arrangements.</p></div>
-  <label class="sort">Sort <select id="fsort"><option value="featured">Featured first</option><option value="new">Newest</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></label></div>
+<form class="sbox" id="searchForm" role="search">
+  <input id="fq" type="search" placeholder="Search location or property" data-i18n-ph="search.ph" aria-label="Search">
+  <select id="ftype" aria-label="Property type"><option value="" data-i18n="type.all">All property types</option><option value="Land" data-i18n="v.Land">Land</option><option value="House" data-i18n="v.House">House</option><option value="Apartment" data-i18n="v.Apartment">Apartment</option><option value="Commercial" data-i18n="v.Commercial">Commercial</option><option value="Rental" data-i18n="v.Rental">Rental</option></select>
+  <select id="fpurpose" aria-label="Sale or rent"><option value="" data-i18n="purpose.all">Sale or rent</option><option value="For sale" data-i18n="v.For sale">For sale</option><option value="For rent" data-i18n="v.For rent">For rent</option></select>
+  <select id="fbudget" aria-label="Maximum budget"><option value="" data-i18n="budget.any">Any budget (UGX)</option><option value="50000000" data-i18n="b.50">Up to 50M</option><option value="100000000" data-i18n="b.100">Up to 100M</option><option value="250000000" data-i18n="b.250">Up to 250M</option><option value="500000000" data-i18n="b.500">Up to 500M</option><option value="1000000000" data-i18n="b.1000">Up to 1 Billion</option></select>
+  <button class="btn" type="submit" data-i18n="search.btn">Search</button>
+</form>
+  <div class="listhead"><div class="head"><div class="eyebrow" data-i18n="list.eyebrow">Featured opportunities</div><h2 data-i18n="list.title">Explore available properties</h2><p data-i18n="list.sub">Browse the catalogue and contact us for verified details, documentation and viewing arrangements.</p></div>
+  <label class="sort"><span data-i18n="sort">Sort</span> <select id="fsort"><option value="featured" data-i18n="sort.featured">Featured first</option><option value="new" data-i18n="sort.new">Newest</option><option value="low" data-i18n="sort.low">Price: low to high</option><option value="high" data-i18n="sort.high">Price: high to low</option></select> <select class="cur" style="margin-left:6px" id="curSel" aria-label="Display currency"><option value="asListed" data-i18n="cur.asListed">Price: as listed</option><option value="UGX">UGX (Shs)</option><option value="USD">USD ($)</option><option value="EUR">EUR (€)</option><option value="GBP">GBP (£)</option><option value="JPY">JPY (¥)</option></select></label></div>
   <div class="grid" id="propertyGrid"><div class="skel"></div><div class="skel"></div><div class="skel"></div></div>
   <div class="empty" id="empty">No matching properties found. Try another search or contact us for assistance.</div>
   <div class="demo" id="demoNote" hidden>Preview mode: these are demonstration listings stored only in your browser. Connect Firebase (see the setup guide) to publish real properties.</div>
-  <p style="font-size:12px;color:var(--muted);margin-top:18px" id="rateNote">Converted prices are approximate and for guidance only; the listed currency applies.</p>
+  <p style="font-size:12px;color:var(--muted);margin-top:18px" id="rateNote" data-i18n="rate.note">Converted prices are approximate and for guidance only; the listed currency applies.</p>
 </div></section>
 
 <section class="alt" id="services"><div class="wrap">
-  <div class="head"><div class="eyebrow">What we do</div><h2>Real estate services</h2><p>Practical support for people looking to buy, sell, rent or invest in property.</p></div>
+  <div class="head"><div class="eyebrow" data-i18n="svc.eyebrow">What we do</div><h2 data-i18n="svc.title">Real estate services</h2><p data-i18n="svc.sub">Practical support for people looking to buy, sell, rent or invest in property.</p></div>
   <div class="grid" id="servicesGrid"></div>
-  <div class="steps"><div class="step"><h4>Tell us what you need</h4><p>Share your location, budget and property type by WhatsApp, call or the form below.</p></div><div class="step"><h4>We shortlist options</h4><p>We send suitable properties with photos, prices and location details.</p></div><div class="step"><h4>Visit and decide</h4><p>Book a viewing, ask your questions and take the next step with confidence.</p></div></div>
+  <div class="steps"><div class="step"><h4 data-i18n="step1.t">Tell us what you need</h4><p data-i18n="step1.d">Share your location, budget and property type by WhatsApp, call or the form below.</p></div><div class="step"><h4 data-i18n="step2.t">We shortlist options</h4><p data-i18n="step2.d">We send suitable properties with photos, prices and location details.</p></div><div class="step"><h4 data-i18n="step3.t">Visit and decide</h4><p data-i18n="step3.d">Book a viewing, ask your questions and take the next step with confidence.</p></div></div>
+</div></section>
+
+<section id="why"><div class="wrap">
+  <div class="head" style="margin-inline:auto;text-align:center"><div class="eyebrow" data-i18n="why.eyebrow">Why choose us</div><h2 data-i18n="why.title">We care about your property journey</h2></div>
+  <div class="whygrid" id="whyGrid"></div>
 </div></section>
 
 <section id="about"><div class="wrap aboutgrid">
   <div class="aboutvisual" id="aboutImg" role="img" aria-label="About us"></div>
-  <div class="aboutcopy"><div class="eyebrow">A personal approach to property</div><h2 class="h2" data-t="aboutTitle"></h2>
+  <div class="aboutcopy"><div class="eyebrow" data-i18n="about.eyebrow">A personal approach to property</div><h2 class="h2" data-t="aboutTitle"></h2>
   <p data-t="aboutText"></p>
-  <div class="checks"><span>Responsive property enquiries</span><span>Viewing coordination</span><span>Clear property information</span><span>Buyer and seller support</span></div>
-  <a class="btn" href="#contact">Get in touch</a></div>
+  <div class="checks"><span data-i18n="check1">Responsive property enquiries</span><span data-i18n="check2">Viewing coordination</span><span data-i18n="check3">Clear property information</span><span data-i18n="check4">Buyer and seller support</span></div>
+  <a class="btn" href="#contact" data-i18n="about.btn">Get in touch</a></div>
 </div></section>
 
+<section class="alt" id="testi" hidden><div class="wrap"><div class="testi"><div class="eyebrow" data-i18n="test.eyebrow">What clients say</div><blockquote id="tqText"></blockquote><cite><span id="tqName"></span><small id="tqRole"></small></cite></div></div></section>
+
 <section class="alt" id="faq"><div class="wrap">
-  <div class="head"><div class="eyebrow">Good to know</div><h2>Frequently asked questions</h2></div>
+  <div class="head"><div class="eyebrow" data-i18n="faq.eyebrow">Good to know</div><h2 data-i18n="faq.title">Frequently asked questions</h2></div>
   <div class="faq" id="faqList"></div>
 </div></section>
 
+<section class="cta" id="cta"><div class="wrap"><h2 data-i18n="cta.title">Ready to find your property?</h2><p data-i18n="cta.sub">Message us today and we will help you take the next step.</p><div class="actions" style="justify-content:center"><a class="btn" href="#contact" data-i18n="cta.btn">Enquire now</a><a class="btn wa" id="ctaWa" href="#" target="_blank" rel="noopener"><svg class="ico-wa" viewBox="0 0 24 24"><use href="#waicon"/></svg> <span data-i18n="hero.wa">WhatsApp us</span></a></div></div></section>
+
 <section id="contact"><div class="wrap"><div class="cgrid">
   <div class="cbox">
-    <div class="eyebrow">Let's talk property</div><h2 class="h2">Looking to buy, sell or rent?</h2>
-    <p style="color:var(--muted);margin:0">Tell us what you are looking for. Contact us directly, or send an enquiry and we will get back to you.</p>
+    <div class="eyebrow" data-i18n="contact.eyebrow">Let's talk property</div><h2 class="h2" data-i18n="contact.title">Looking to buy, sell or rent?</h2>
+    <p style="color:var(--muted);margin:0" data-i18n="contact.sub">Tell us what you are looking for. Contact us directly, or send an enquiry and we will get back to you.</p>
     <div class="clist" id="clist"></div>
     <iframe class="map" id="mapFrame" title="Our location" loading="lazy" referrerpolicy="no-referrer-when-downgrade" hidden></iframe>
     <div class="soc" id="soc" style="margin-top:16px"></div>
   </div>
   <div class="cbox">
-    <h2 class="h2" style="margin-top:0">Send an enquiry</h2>
+    <h2 class="h2" style="margin-top:0" data-i18n="form.title">Send an enquiry</h2>
     <form class="form" id="enqForm" novalidate>
-      <div class="two"><input class="fld" name="name" placeholder="Your name *" required maxlength="120" autocomplete="name"><input class="fld" name="phone" placeholder="Phone / WhatsApp *" required maxlength="40" autocomplete="tel"></div>
-      <input class="fld" name="email" type="email" placeholder="Email (optional)" maxlength="200" autocomplete="email">
-      <input class="fld" name="propertyTitle" id="enqProp" placeholder="Property of interest (optional)" maxlength="200">
-      <textarea class="fld" name="message" placeholder="How can we help? *" required maxlength="2000"></textarea>
+      <div class="two"><input class="fld" name="name" placeholder="Your name *" data-i18n-ph="form.name" required maxlength="120" autocomplete="name"><input class="fld" name="phone" placeholder="Phone / WhatsApp *" data-i18n-ph="form.phone" required maxlength="40" autocomplete="tel"></div>
+      <input class="fld" name="email" type="email" placeholder="Email (optional)" data-i18n-ph="form.email" maxlength="200" autocomplete="email">
+      <input class="fld" name="propertyTitle" id="enqProp" placeholder="Property of interest (optional)" data-i18n-ph="form.prop" maxlength="200">
+      <textarea class="fld" name="message" placeholder="How can we help? *" data-i18n-ph="form.msg" required maxlength="2000"></textarea>
       <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <button class="btn" type="submit" id="enqBtn">Send enquiry</button>
+      <button class="btn" type="submit" id="enqBtn" data-i18n="form.send">Send enquiry</button>
       <div class="err" id="enqErr" role="alert"></div>
     </form>
-    <div class="ok" id="enqOk" hidden>Thank you! Your enquiry has been received. <a id="enqWa" href="#" target="_blank" rel="noopener" style="text-decoration:underline;font-weight:700">Continue on WhatsApp ↗</a></div>
+    <div class="ok" id="enqOk" hidden><span data-i18n="form.ok">Thank you! Your enquiry has been received.</span> <a id="enqWa" href="#" target="_blank" rel="noopener" style="text-decoration:underline;font-weight:700" data-i18n="form.okwa">Continue on WhatsApp ↗</a></div>
   </div>
 </div></div></section>
 </main>
 
 <footer><div class="wrap"><div class="foot">
-  <div><a class="brand" href="#home"><span class="mark brandlogo">E</span><span class="bname"><span data-t="name"></span><small data-t="tagline"></small></span></a><p style="margin-top:12px">Professional property enquiries for land, houses and real estate opportunities.</p></div>
-  <div class="footlinks"><a href="#listings">Properties</a><a href="#services">Services</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
-</div><div class="copy"><span>© <span id="year"></span> <span data-t="name"></span>. All rights reserved.</span><a href="#admin" style="opacity:.85;border:1px solid var(--line);padding:4px 12px;border-radius:99px">🔒 Admin login</a></div></div></footer>
+  <div><a class="brand" href="#home"><span class="mark brandlogo">E</span><span class="bname"><span data-t="name"></span><small data-t="tagline"></small></span></a><p style="margin-top:12px" data-i18n="foot.desc">Professional property enquiries for land, houses and real estate opportunities.</p><div class="soc" id="fsoc" style="margin-top:14px"></div></div>
+  <div class="footlinks"><a href="#home" data-i18n="nav.home">Home</a><a href="#listings" data-i18n="nav.props">Properties</a><a href="#services" data-i18n="nav.services">Services</a><a href="#about" data-i18n="nav.about">About</a><a href="#faq" data-i18n="nav.faq">FAQ</a><a href="#contact" data-i18n="nav.contact">Contact</a></div>
+</div><div class="copy"><span>© <span id="year"></span> <span data-t="name"></span>. <span data-i18n="foot.rights">All rights reserved.</span></span><a href="#admin" style="opacity:.85;border:1px solid var(--line);padding:4px 12px;border-radius:99px">🔒 Admin login</a></div></div></footer>
 
 <a class="wafloat" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp" hidden><svg viewBox="0 0 24 24"><use href="#waicon"/></svg></a>
-<div class="watip" id="waTip" hidden>Chat with us on WhatsApp</div>
+<div class="watip" id="waTip" hidden data-i18n="wa.tip">Chat with us on WhatsApp</div>
 
 <div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-label="Property details"><div class="mbox"><button class="mclose" id="mclose" aria-label="Close">×</button><div id="mbody"></div></div></div>
 </div>
@@ -296,6 +315,8 @@ const DEFAULTS = {
   aboutImageUrl: '',
   services: 'Land sales | Assistance finding land opportunities and arranging property enquiries and site visits.\nHouse sales | Explore residential property options and request information or a viewing.\nProperty sourcing | Share your preferred location, budget and needs and we will look for suitable options.\nRentals | Find apartments, houses and commercial spaces available for rent.\nCommercial property | Enquire about business premises and investment property opportunities.\nViewing appointments | Arrange a suitable time to visit a property and ask questions in person.',
   faq: 'How do I arrange a viewing? | Message us on WhatsApp or send an enquiry with the property you like and your preferred day. We will confirm a time.\nWhat documents should I ask for before buying? | Ask to see the ownership documents (such as the land title) and have them checked at the land registry before paying. We can guide you on the next steps.\nCan I buy from outside the country? | Yes. Many clients enquire from abroad. We can share photos, videos and details by WhatsApp and arrange a viewing on your behalf.\nAre the prices negotiable? | Some are. Contact us about the property you like and we will confirm the current price and terms.',
+  why: 'Honest guidance | Clear, straightforward advice from first enquiry to viewing.\nSafe & verified | We encourage checking ownership documents before any payment.\nPrime locations | Properties in sought-after areas, with photos, video and maps.\nFair pricing | Clear prices in UGX, with USD, EUR, GBP and JPY views.',
+  testimonialText: '', testimonialName: '', testimonialRole: '',
   facebook: '', instagram: '', tiktok: '', x: '', youtube: '',
   waFloating: true, waMessage: 'Hello, I would like to enquire about your properties.',
   displayCurrency: 'asListed',
@@ -381,6 +402,24 @@ let Store, connectFailed = false;
 try { Store = LIVE ? await makeFirebase() : makeLocal(true); }
 catch (e) { console.error(e); connectFailed = true; Store = makeLocal(false); }
 
+const I18N = {"en": {"nav.props": "Properties", "nav.services": "Services", "nav.about": "About", "nav.faq": "FAQ", "nav.contact": "Contact", "nav.enquire": "Enquire now ↗", "menu": "Menu", "cur.asListed": "Price: as listed", "hero.explore": "Explore properties ↓", "hero.wa": "WhatsApp us", "search.ph": "Search location or property", "type.all": "All property types", "purpose.all": "Sale or rent", "budget.any": "Any budget (UGX)", "b.50": "Up to 50M", "b.100": "Up to 100M", "b.250": "Up to 250M", "b.500": "Up to 500M", "b.1000": "Up to 1 Billion", "search.btn": "Search", "list.eyebrow": "Featured opportunities", "list.title": "Explore available properties", "list.sub": "Browse the catalogue and contact us for verified details, documentation and viewing arrangements.", "sort": "Sort", "sort.featured": "Featured first", "sort.new": "Newest", "sort.low": "Price: low to high", "sort.high": "Price: high to low", "empty.none": "No matching properties found. Try another search or contact us for assistance.", "empty.noprops": "New properties are being added. Contact us on WhatsApp to hear about current opportunities.", "empty.err": "We could not load properties right now. Please refresh, or contact us directly.", "rate.note": "Converted prices are approximate and for guidance only; the listed currency applies.", "svc.eyebrow": "What we do", "svc.title": "Real estate services", "svc.sub": "Practical support for people looking to buy, sell, rent or invest in property.", "step1.t": "Tell us what you need", "step1.d": "Share your location, budget and property type by WhatsApp, call or the form below.", "step2.t": "We shortlist options", "step2.d": "We send suitable properties with photos, prices and location details.", "step3.t": "Visit and decide", "step3.d": "Book a viewing, ask your questions and take the next step with confidence.", "about.eyebrow": "A personal approach to property", "check1": "Responsive property enquiries", "check2": "Viewing coordination", "check3": "Clear property information", "check4": "Buyer and seller support", "about.btn": "Get in touch", "faq.eyebrow": "Good to know", "faq.title": "Frequently asked questions", "contact.eyebrow": "Let's talk property", "contact.title": "Looking to buy, sell or rent?", "contact.sub": "Tell us what you are looking for. Contact us directly, or send an enquiry and we will get back to you.", "form.title": "Send an enquiry", "form.name": "Your name *", "form.phone": "Phone / WhatsApp *", "form.email": "Email (optional)", "form.prop": "Property of interest (optional)", "form.msg": "How can we help? *", "form.send": "Send enquiry", "form.sending": "Sending…", "form.err1": "Please fill in your name, phone and message.", "form.errEmail": "Please enter a valid email or leave it blank.", "form.wait": "Please wait a moment before sending another enquiry.", "form.fail": "Sorry, we could not send that. Please message us on WhatsApp instead.", "form.ok": "Thank you! Your enquiry has been received.", "form.okwa": "Continue on WhatsApp ↗", "foot.desc": "Professional property enquiries for land, houses and real estate opportunities.", "foot.rights": "All rights reserved.", "wa.tip": "Chat with us on WhatsApp", "wa.hello": "Hello, I would like more information about:", "card.view": "View details", "card.feat": "★ Featured", "card.video": "▶ Video", "bed": "bed", "bath": "bath", "price.req": "Price on request", "price.listed": "Listed at", "m.about": "About this property", "m.features": "Features", "m.location": "Location", "m.wa": "Enquire on WhatsApp", "m.call": "☎ Call us", "m.enq": "✉ Send an enquiry", "m.share": "⤴ Share this property", "m.copied": "Link copied", "f.type": "Type", "f.purpose": "Purpose", "f.status": "Status", "f.size": "Size", "f.beds": "Bedrooms", "f.baths": "Bathrooms", "trust.props": "Properties listed", "trust.types": "Property types", "trust.wa": "WhatsApp enquiries", "v.Land": "Land", "v.House": "House", "v.Apartment": "Apartment", "v.Commercial": "Commercial", "v.Rental": "Rental", "v.For sale": "For sale", "v.For rent": "For rent", "v.Available": "Available", "v.Under offer": "Under offer", "v.Sold": "Sold", "v.Rented": "Rented"}, "sw": {"nav.props": "Mali", "nav.services": "Huduma", "nav.about": "Kuhusu sisi", "nav.faq": "Maswali", "nav.contact": "Wasiliana", "nav.enquire": "Uliza sasa ↗", "menu": "Menyu", "cur.asListed": "Bei: kama ilivyoorodheshwa", "hero.explore": "Tazama mali ↓", "hero.wa": "Tuandikie WhatsApp", "search.ph": "Tafuta eneo au mali", "type.all": "Aina zote za mali", "purpose.all": "Kuuza au kupangisha", "budget.any": "Bajeti yoyote (UGX)", "b.50": "Hadi 50M", "b.100": "Hadi 100M", "b.250": "Hadi 250M", "b.500": "Hadi 500M", "b.1000": "Hadi Bilioni 1", "search.btn": "Tafuta", "list.eyebrow": "Fursa zilizochaguliwa", "list.title": "Gundua mali zinazopatikana", "list.sub": "Vinjari orodha na wasiliana nasi kupata maelezo yaliyothibitishwa, nyaraka na mipango ya kutazama mali.", "sort": "Panga", "sort.featured": "Zilizochaguliwa kwanza", "sort.new": "Mpya zaidi", "sort.low": "Bei: chini hadi juu", "sort.high": "Bei: juu hadi chini", "empty.none": "Hakuna mali zilizopatikana. Jaribu utafutaji mwingine au wasiliana nasi kwa msaada.", "empty.noprops": "Mali mpya zinaongezwa. Tuandikie WhatsApp kujua fursa zilizopo sasa.", "empty.err": "Hatukuweza kupakia mali sasa. Tafadhali onyesha upya ukurasa au wasiliana nasi moja kwa moja.", "rate.note": "Bei zilizobadilishwa ni makadirio tu; sarafu iliyoorodheshwa ndiyo inayotumika.", "svc.eyebrow": "Tunachofanya", "svc.title": "Huduma za mali isiyohamishika", "svc.sub": "Msaada wa vitendo kwa wanaotaka kununua, kuuza, kupangisha au kuwekeza kwenye mali.", "step1.t": "Tuambie unachohitaji", "step1.d": "Tuambie eneo, bajeti na aina ya mali kwa WhatsApp, simu au fomu iliyo hapa chini.", "step2.t": "Tunachagua chaguo bora", "step2.d": "Tunakutumia mali zinazofaa pamoja na picha, bei na maelezo ya eneo.", "step3.t": "Tembelea na uamue", "step3.d": "Panga ziara ya kutazama, uliza maswali yako na uchukue hatua inayofuata kwa uhakika.", "about.eyebrow": "Mtazamo wa kibinafsi kwa mali", "check1": "Majibu ya haraka kwa maswali ya mali", "check2": "Kuratibu ziara za kutazama", "check3": "Taarifa za mali zilizo wazi", "check4": "Msaada kwa wanunuzi na wauzaji", "about.btn": "Wasiliana nasi", "faq.eyebrow": "Mambo ya kujua", "faq.title": "Maswali yanayoulizwa mara kwa mara", "contact.eyebrow": "Tuzungumze kuhusu mali", "contact.title": "Unataka kununua, kuuza au kupangisha?", "contact.sub": "Tuambie unachotafuta. Wasiliana nasi moja kwa moja, au tuma ombi nasi tutakujibu.", "form.title": "Tuma ombi", "form.name": "Jina lako *", "form.phone": "Simu / WhatsApp *", "form.email": "Barua pepe (si lazima)", "form.prop": "Mali unayopendelea (si lazima)", "form.msg": "Tukusaidie vipi? *", "form.send": "Tuma ombi", "form.sending": "Inatuma…", "form.err1": "Tafadhali jaza jina, simu na ujumbe wako.", "form.errEmail": "Tafadhali weka barua pepe sahihi au iache wazi.", "form.wait": "Tafadhali subiri kidogo kabla ya kutuma ombi lingine.", "form.fail": "Samahani, hatukuweza kutuma. Tafadhali tuandikie WhatsApp.", "form.ok": "Asante! Ombi lako limepokelewa.", "form.okwa": "Endelea kwenye WhatsApp ↗", "foot.desc": "Huduma za kitaalamu za maswali kuhusu ardhi, nyumba na fursa za mali isiyohamishika.", "foot.rights": "Haki zote zimehifadhiwa.", "wa.tip": "Zungumza nasi WhatsApp", "wa.hello": "Habari, ningependa kupata maelezo zaidi kuhusu:", "card.view": "Tazama maelezo", "card.feat": "★ Imechaguliwa", "card.video": "▶ Video", "bed": "vyumba vya kulala", "bath": "bafu", "price.req": "Bei kwa ombi", "price.listed": "Imeorodheshwa kwa", "m.about": "Kuhusu mali hii", "m.features": "Vipengele", "m.location": "Mahali", "m.wa": "Uliza kwa WhatsApp", "m.call": "☎ Tupigie simu", "m.enq": "✉ Tuma ombi", "m.share": "⤴ Shiriki mali hii", "m.copied": "Kiungo kimenakiliwa", "f.type": "Aina", "f.purpose": "Madhumuni", "f.status": "Hali", "f.size": "Ukubwa", "f.beds": "Vyumba vya kulala", "f.baths": "Bafu", "trust.props": "Mali zilizoorodheshwa", "trust.types": "Aina za mali", "trust.wa": "Maswali kwa WhatsApp", "v.Land": "Ardhi", "v.House": "Nyumba", "v.Apartment": "Apartmenti", "v.Commercial": "Biashara", "v.Rental": "Ya kupangisha", "v.For sale": "Inauzwa", "v.For rent": "Inapangishwa", "v.Available": "Inapatikana", "v.Under offer": "Iko kwenye mazungumzo", "v.Sold": "Imeuzwa", "v.Rented": "Imepangishwa", "d.heroTitle": "Tafuta ardhi na nyumba unazoweza kuziamini.", "d.heroSubtitle": "Gundua ardhi, nyumba na fursa za mali isiyohamishika kwa mwongozo wa kibinafsi kutoka kuuliza hadi kutazama. Safari yako ya mali huanzia hapa.", "d.aboutTitle": "Tunakusaidia kuchukua hatua yako ijayo ya mali.", "d.aboutText": "Tunaunganisha wanaotafuta mali na fursa za ardhi na mali isiyohamishika, tukitoa mawasiliano ya wazi na msaada katika hatua zote za kuuliza.\n\nIwe unatafuta kiwanja, nyumba ya familia au nafasi ya biashara, tuambie unachohitaji nasi tutajadili chaguo zilizopo.", "d.services": "Uuzaji wa ardhi | Msaada wa kupata fursa za ardhi na kupanga maswali na ziara za kutembelea eneo.\nUuzaji wa nyumba | Gundua chaguo za nyumba za makazi na uombe maelezo au ziara ya kutazama.\nKutafuta mali | Tuambie eneo, bajeti na mahitaji yako nasi tutakutafutia mali zinazofaa.\nKupangisha | Pata apartmenti, nyumba na nafasi za biashara zinazopangishwa.\nMali za biashara | Uliza kuhusu majengo ya biashara na fursa za uwekezaji.\nMiadi ya kutazama | Panga muda unaofaa wa kutembelea mali na kuuliza maswali ana kwa ana.", "d.faq": "Ninawezaje kupanga ziara ya kutazama? | Tuandikie WhatsApp au tuma ombi ukitaja mali unayoipenda na siku unayopendelea. Tutathibitisha muda.\nNinapaswa kuomba nyaraka gani kabla ya kununua? | Omba kuona nyaraka za umiliki (kama hati ya ardhi) na zihakikiwe kwenye ofisi ya usajili wa ardhi kabla ya kulipa. Tunaweza kukuongoza kwa hatua zinazofuata.\nNaweza kununua nikiwa nje ya nchi? | Ndiyo. Wateja wengi huuliza wakiwa nje. Tunaweza kutuma picha, video na maelezo kwa WhatsApp na kupanga ziara kwa niaba yako.\nJe, bei zinaweza kujadiliwa? | Baadhi ndiyo. Wasiliana nasi kuhusu mali unayoipenda nasi tutathibitisha bei na masharti ya sasa.", "d.waMessage": "Habari, ningependa kuuliza kuhusu mali zenu."}, "fr": {"nav.props": "Biens", "nav.services": "Services", "nav.about": "À propos", "nav.faq": "FAQ", "nav.contact": "Contact", "nav.enquire": "Nous écrire ↗", "menu": "Menu", "cur.asListed": "Prix : tel que listé", "hero.explore": "Voir les biens ↓", "hero.wa": "Écrivez-nous sur WhatsApp", "search.ph": "Rechercher un lieu ou un bien", "type.all": "Tous types de biens", "purpose.all": "Vente ou location", "budget.any": "Tout budget (UGX)", "b.50": "Jusqu'à 50M", "b.100": "Jusqu'à 100M", "b.250": "Jusqu'à 250M", "b.500": "Jusqu'à 500M", "b.1000": "Jusqu'à 1 milliard", "search.btn": "Rechercher", "list.eyebrow": "Opportunités à la une", "list.title": "Découvrez les biens disponibles", "list.sub": "Parcourez le catalogue et contactez-nous pour des informations vérifiées, les documents et l’organisation des visites.", "sort": "Trier", "sort.featured": "À la une d’abord", "sort.new": "Plus récents", "sort.low": "Prix : croissant", "sort.high": "Prix : décroissant", "empty.none": "Aucun bien correspondant. Essayez une autre recherche ou contactez-nous.", "empty.noprops": "De nouveaux biens sont en cours d’ajout. Écrivez-nous sur WhatsApp pour connaître les opportunités actuelles.", "empty.err": "Impossible de charger les biens pour le moment. Actualisez la page ou contactez-nous directement.", "rate.note": "Les prix convertis sont approximatifs et donnés à titre indicatif ; la devise indiquée fait foi.", "svc.eyebrow": "Ce que nous faisons", "svc.title": "Services immobiliers", "svc.sub": "Un accompagnement concret pour acheter, vendre, louer ou investir dans l’immobilier.", "step1.t": "Dites-nous ce qu’il vous faut", "step1.d": "Indiquez lieu, budget et type de bien par WhatsApp, téléphone ou le formulaire ci-dessous.", "step2.t": "Nous présélectionnons", "step2.d": "Nous vous envoyons des biens adaptés avec photos, prix et localisation.", "step3.t": "Visitez et décidez", "step3.d": "Réservez une visite, posez vos questions et avancez en toute confiance.", "about.eyebrow": "Une approche personnelle de l’immobilier", "check1": "Réponses rapides à vos demandes", "check2": "Organisation des visites", "check3": "Informations claires sur les biens", "check4": "Accompagnement acheteurs et vendeurs", "about.btn": "Contactez-nous", "faq.eyebrow": "Bon à savoir", "faq.title": "Questions fréquentes", "contact.eyebrow": "Parlons immobilier", "contact.title": "Vous souhaitez acheter, vendre ou louer ?", "contact.sub": "Dites-nous ce que vous cherchez. Contactez-nous directement ou envoyez une demande, nous vous répondrons.", "form.title": "Envoyer une demande", "form.name": "Votre nom *", "form.phone": "Téléphone / WhatsApp *", "form.email": "E-mail (facultatif)", "form.prop": "Bien concerné (facultatif)", "form.msg": "Comment pouvons-nous vous aider ? *", "form.send": "Envoyer", "form.sending": "Envoi…", "form.err1": "Veuillez renseigner votre nom, téléphone et message.", "form.errEmail": "Veuillez saisir un e-mail valide ou laisser vide.", "form.wait": "Veuillez patienter un instant avant d’envoyer une autre demande.", "form.fail": "Désolé, l’envoi a échoué. Écrivez-nous plutôt sur WhatsApp.", "form.ok": "Merci ! Votre demande a bien été reçue.", "form.okwa": "Continuer sur WhatsApp ↗", "foot.desc": "Demandes immobilières professionnelles : terrains, maisons et opportunités immobilières.", "foot.rights": "Tous droits réservés.", "wa.tip": "Discutez avec nous sur WhatsApp", "wa.hello": "Bonjour, je souhaite plus d’informations sur :", "card.view": "Voir les détails", "card.feat": "★ À la une", "card.video": "▶ Vidéo", "bed": "ch.", "bath": "sdb", "price.req": "Prix sur demande", "price.listed": "Affiché à", "m.about": "À propos de ce bien", "m.features": "Caractéristiques", "m.location": "Localisation", "m.wa": "Demander sur WhatsApp", "m.call": "☎ Appelez-nous", "m.enq": "✉ Envoyer une demande", "m.share": "⤴ Partager ce bien", "m.copied": "Lien copié", "f.type": "Type", "f.purpose": "Objet", "f.status": "Statut", "f.size": "Surface", "f.beds": "Chambres", "f.baths": "Salles de bain", "trust.props": "Biens listés", "trust.types": "Types de biens", "trust.wa": "Demandes WhatsApp", "v.Land": "Terrain", "v.House": "Maison", "v.Apartment": "Appartement", "v.Commercial": "Commercial", "v.Rental": "Location", "v.For sale": "À vendre", "v.For rent": "À louer", "v.Available": "Disponible", "v.Under offer": "Sous offre", "v.Sold": "Vendu", "v.Rented": "Loué", "d.heroTitle": "Trouvez des terrains et des maisons de confiance.", "d.heroSubtitle": "Découvrez terrains, maisons et opportunités immobilières avec un accompagnement personnalisé, de la demande à la visite. Votre prochain projet immobilier commence ici.", "d.aboutTitle": "Nous vous aidons à réussir votre prochain projet immobilier.", "d.aboutText": "Nous mettons en relation les personnes qui cherchent un bien avec des terrains et opportunités immobilières, avec une communication claire et un suivi tout au long de la demande.\n\nQue vous cherchiez un terrain, une maison familiale ou un local commercial, dites-nous ce qu’il vous faut et nous discuterons des options disponibles.", "d.services": "Vente de terrains | Aide pour trouver des terrains, organiser les demandes et les visites de site.\nVente de maisons | Découvrez les maisons disponibles et demandez des informations ou une visite.\nRecherche de biens | Indiquez lieu, budget et besoins, nous chercherons les biens adaptés.\nLocations | Trouvez appartements, maisons et locaux commerciaux à louer.\nImmobilier commercial | Renseignez-vous sur les locaux professionnels et les opportunités d’investissement.\nRendez-vous de visite | Choisissez un créneau pour visiter un bien et poser vos questions sur place.", "d.faq": "Comment organiser une visite ? | Écrivez-nous sur WhatsApp ou envoyez une demande avec le bien souhaité et le jour préféré. Nous confirmerons l’horaire.\nQuels documents demander avant d’acheter ? | Demandez les documents de propriété (comme le titre foncier) et faites-les vérifier au registre foncier avant de payer. Nous pouvons vous guider.\nPuis-je acheter depuis l’étranger ? | Oui. Beaucoup de clients nous contactent de l’étranger. Nous envoyons photos, vidéos et détails par WhatsApp et organisons une visite pour vous.\nLes prix sont-ils négociables ? | Certains le sont. Contactez-nous pour le bien qui vous plaît et nous confirmerons le prix et les conditions actuels.", "d.waMessage": "Bonjour, je souhaite me renseigner sur vos biens immobiliers."}, "lg": {"nav.props": "Ebibanja & Amayumba", "nav.services": "Obuweereza", "nav.about": "Ebitukwatako", "nav.faq": "Ebibuuzo", "nav.contact": "Tukwasaganye", "nav.enquire": "Buuza kati ↗", "menu": "Menu", "cur.asListed": "Omuwendo: nga bwe guli", "hero.explore": "Laba ebibanja n’amayumba ↓", "hero.wa": "Tuwandiikire ku WhatsApp", "search.ph": "Noonya ekifo oba ekibanja", "type.all": "Ebika byonna", "purpose.all": "Okutunda oba okupangisa", "budget.any": "Ensimbi zonna (UGX)", "b.50": "Okutuuka ku 50M", "b.100": "Okutuuka ku 100M", "b.250": "Okutuuka ku 250M", "b.500": "Okutuuka ku 500M", "b.1000": "Okutuuka ku Bbiriyoni 1", "search.btn": "Noonya", "list.eyebrow": "Ebisinga okulabika", "list.title": "Laba ebibanja n’amayumba ebiriwo", "list.sub": "Weekenneenye olukalala, otukubire oba otuwandiikire okufuna amawulire amakakafu, empapula n’okutegeka okulaba ekifo.", "sort": "Tegeka", "sort.featured": "Ebisinga okulabika", "sort.new": "Ebipya", "sort.low": "Omuwendo: wansi → waggulu", "sort.high": "Omuwendo: waggulu → wansi", "empty.none": "Tewali bibanja bikwatagana. Gezaako okunoonya ekirala oba otukubire.", "empty.noprops": "Tuteekawo ebipya. Tuwandiikire ku WhatsApp okumanya ebiriwo kati.", "empty.err": "Tetusobodde kuleeta bibanja kati. Ddamu olabe oba otukubire butereevu.", "rate.note": "Emiwendo egyakyusibwa gya kigerageranyo; ensimbi ezaateekebwawo ze zikozesebwa.", "svc.eyebrow": "Kye tukola", "svc.title": "Obuweereza bw’ebibanja n’amayumba", "svc.sub": "Obuyambi eri abo abaagala okugula, okutunda, okupangisa oba okussa ensimbi mu bibanja.", "step1.t": "Tubuulire ky’oyagala", "step1.d": "Tubuulire ekifo, embalirira n’ekika ky’ekibanja ku WhatsApp, essimu oba foomu eri wansi.", "step2.t": "Tulondako ebisinga", "step2.d": "Tukuweereza ebibanja ebikwatagana n’ebifaananyi, emiwendo n’ekifo.", "step3.t": "Genda olabe osalawo", "step3.d": "Teekawo olunaku lw’okulaba, buuza ebibuuzo byo, olyoke osalewo n’obwesige.", "about.eyebrow": "Engeri ey’obuntu mu bibanja", "check1": "Okuddamu amangu", "check2": "Okutegeka okulaba ekifo", "check3": "Amawulire amalambulukufu", "check4": "Obuyambi eri abagula n’abatunda", "about.btn": "Tukwasaganye", "faq.eyebrow": "Ebirungi okumanya", "faq.title": "Ebibuuzo ebibuuzibwa ennyo", "contact.eyebrow": "Twogere ku bibanja", "contact.title": "Oyagala okugula, okutunda oba okupangisa?", "contact.sub": "Tubuulire ky’onoonya. Tukubire butereevu oba otuweereze ekibuuzo, tunaakuddamu.", "form.title": "Tuweereze ekibuuzo", "form.name": "Erinnya lyo *", "form.phone": "Essimu / WhatsApp *", "form.email": "Email (si kya buwaze)", "form.prop": "Ekibanja ky’oyagala (si kya buwaze)", "form.msg": "Tukuyambe tutya? *", "form.send": "Weereza", "form.sending": "Kiweerezebwa…", "form.err1": "Wandiika erinnya, essimu n’obubaka.", "form.errEmail": "Teeka email entuufu obaogireke.", "form.wait": "Linda katono nga tonnaweereza kibuuzo kirala.", "form.fail": "Tusonyiwe, tetusobodde kukiweereza. Tuwandiikire ku WhatsApp.", "form.ok": "Webale! Ekibuuzo kyo kituuse.", "form.okwa": "Weyongereyo ku WhatsApp ↗", "foot.desc": "Obuweereza obw’ekikugu ku ttaka, amayumba n’ebibanja.", "foot.rights": "Eddembe lyonna literekeddwa.", "wa.tip": "Twogere ku WhatsApp", "wa.hello": "Gyebale, njagala amawulire ag’enjawulo ku:", "card.view": "Laba ebisingawo", "card.feat": "★ Ekisinga", "card.video": "▶ Vidiyo", "bed": "ebisenge", "bath": "ebinaabiro", "price.req": "Buuza omuwendo", "price.listed": "Kyateekebwawo ku", "m.about": "Ebikwata ku kibanja kino", "m.features": "Ebirimu", "m.location": "Ekifo", "m.wa": "Buuza ku WhatsApp", "m.call": "☎ Tukubire", "m.enq": "✉ Weereza ekibuuzo", "m.share": "⤴ Gabana ekibanja kino", "m.copied": "Link ekoppeddwa", "f.type": "Ekika", "f.purpose": "Ekigendererwa", "f.status": "Embeera", "f.size": "Obunene", "f.beds": "Ebisenge", "f.baths": "Ebinaabiro", "trust.props": "Ebibanja ebiriwo", "trust.types": "Ebika by’ebibanja", "trust.wa": "Ebibuuzo ku WhatsApp", "v.Land": "Ettaka", "v.House": "Ennyumba", "v.Apartment": "Fleeti", "v.Commercial": "Eby’obusuubuzi", "v.Rental": "Ebipangisibwa", "v.For sale": "Kitundibwa", "v.For rent": "Kipangisibwa", "v.Available": "Kiriwo", "v.Under offer": "Kyogerwako", "v.Sold": "Kitundiddwa", "v.Rented": "Kipangisiddwa", "d.heroTitle": "Noonya ettaka n’amayumba g’osobola okwesiga.", "d.heroSubtitle": "Zuula ettaka, amayumba n’ebibanja nga tukuyamba okuva ku kubuuza okutuuka ku kulaba. Olugendo lwo olw’ebibanja lutandikira wano.", "d.aboutTitle": "Tukuyamba okutuuka ku kibanja kyo ekiddako.", "d.aboutText": "Tuyunga abanoonya ebibanja n’ettaka n’amayumba agaliwo, nga tukuwa okukwatagana okulungi n’obuyambi mu mutendera gwonna.\n\nOba onoonya ekibanja ky’ettaka, ennyumba y’amaka oba ekifo eky’obusuubuzi, tubuulire ky’oyagala tunaayogera ku ebiriwo.", "d.services": "Okutunda ettaka | Obuyambi mu kuzuula ettaka n’okutegeka okulaba ebifo.\nOkutunda amayumba | Laba amayumba agaliwo obuuze ebisingawo oba otegeke okugalaba.\nOkunoonya ebibanja | Tubuulire ekifo, embalirira n’ebyetaago byo, tunaakunoonyeza ebisaanira.\nOkupangisa | Zuula fleeti, amayumba n’ebifo eby’obusuubuzi ebipangisibwa.\nEby’obusuubuzi | Buuza ku bizimbe by’obusuubuzi n’emikisa gy’okussa ensimbi.\nOkutegeka okulaba ekifo | Londa ekiseera ekikugwanidde okulaba ekibanja n’obuuza ebibuuzo ng’oli awo.", "d.faq": "Nkola ntya okutegeka okulaba ekifo? | Tuwandiikire ku WhatsApp oba otuweereze ekibuuzo ng’olaga ekibanja ky’oyagala n’olunaku. Tujja kukakasa essaawa.\nBiruwa by’ennina okusaba nga tonnagula? | Saba okulaba empapula ezikakasa obwannannyini (nga kyapa ky’ettaka) ozikebejjebwe ku ofiisi y’ettaka nga tonnasasula. Tusobola okukuwa obuyambi.\nNsobola okugula nga ndi bweru w’eggwanga? | Yee. Bangi batukubira nga bali bweru. Tusobola okukuweereza ebifaananyi, vidiyo n’amawulire ku WhatsApp ne tutegeka okulaba ku lwa ggwe.\nEmiwendo gyogerezeganyizibwa? | Egimu. Tukubire ku kibanja ky’oyagala tukakase omuwendo n’ebiragiro by’ekiseera kino.", "d.waMessage": "Gyebale, njagala okubuuza ku bibanja byammwe."}};
+Object.assign(I18N.en, {"nav.home": "Home", "scroll": "Scroll", "trust.cur": "Price currencies", "why.eyebrow": "Why choose us", "why.title": "We care about your property journey", "cta.title": "Ready to find your property?", "cta.sub": "Message us today and we will help you take the next step.", "cta.btn": "Enquire now", "test.eyebrow": "What clients say", "foot.wa": "WhatsApp"});
+Object.assign(I18N.sw, {"nav.home": "Nyumbani", "scroll": "Sogeza", "trust.cur": "Sarafu za bei", "why.eyebrow": "Kwa nini sisi", "why.title": "Tunajali safari yako ya mali", "cta.title": "Uko tayari kupata mali yako?", "cta.sub": "Tuandikie leo nasi tutakusaidia kuchukua hatua inayofuata.", "cta.btn": "Uliza sasa", "test.eyebrow": "Wateja wanasema nini", "foot.wa": "WhatsApp", "d.why": "Mwongozo wa kweli | Ushauri wazi na wa moja kwa moja kuanzia kuuliza hadi kutazama.\nSalama na imethibitishwa | Tunahimiza kukagua nyaraka za umiliki kabla ya malipo yoyote.\nMaeneo bora | Mali katika maeneo yanayotafutwa, zikiwa na picha, video na ramani.\nBei ya haki | Bei wazi kwa UGX, pamoja na mwonekano wa USD, EUR, GBP na JPY."});
+Object.assign(I18N.fr, {"nav.home": "Accueil", "scroll": "Défiler", "trust.cur": "Devises de prix", "why.eyebrow": "Pourquoi nous choisir", "why.title": "Nous accompagnons votre projet immobilier", "cta.title": "Prêt à trouver votre bien ?", "cta.sub": "Écrivez-nous aujourd’hui et nous vous aiderons à passer à l’étape suivante.", "cta.btn": "Nous écrire", "test.eyebrow": "Ce que disent nos clients", "foot.wa": "WhatsApp", "d.why": "Conseils honnêtes | Des conseils clairs et directs, de la première demande à la visite.\nSûr et vérifié | Nous vous encourageons à vérifier les documents de propriété avant tout paiement.\nEmplacements de choix | Des biens dans des quartiers recherchés, avec photos, vidéos et cartes.\nPrix justes | Des prix clairs en UGX, avec affichage en USD, EUR, GBP et JPY."});
+Object.assign(I18N.lg, {"nav.home": "Awaka", "scroll": "Wanula", "trust.cur": "Ensimbi z’emiwendo", "why.eyebrow": "Lwaki otwesiga", "why.title": "Tufaayo ku lugendo lwo olw’ebibanja", "cta.title": "Ofunye ekibanja kyo?", "cta.sub": "Tuwandiikire leero tukuyambe okugenda mu maaso.", "cta.btn": "Buuza kati", "test.eyebrow": "Bakasitoma bye bagamba", "foot.wa": "WhatsApp", "d.why": "Obuyambi obwa amazima | Amagezi amalambulukufu okuva ku kubuuza okutuuka ku kulaba.\nTekyabulabe era kikakasiddwa | Tukubiriza okukebera empapula z’obwannannyini nga tonnasasula.\nEbifo ebisinga | Ebibanja mu bifo ebinoonyebwa, nga biriko ebifaananyi, vidiyo ne maapu.\nOmuwendo omutuufu | Emiwendo egitegeerekeka mu UGX, wamu n’okugiraba mu USD, EUR, GBP ne JPY."});
+const LANGS = ['en', 'lg', 'sw', 'fr'];
+let lang = 'en';
+try { const sv = localStorage.getItem('el_lang'); const br = (navigator.language || 'en').slice(0, 2); lang = LANGS.includes(sv) ? sv : (['sw', 'fr'].includes(br) ? br : 'en'); } catch { }
+const t = k => (I18N[lang] && I18N[lang][k]) || I18N.en[k] || k;
+const tv = v => { const k = 'v.' + v; const r = t(k); return r === k ? v : r; };
+const cfgText = k => { const d = I18N[lang]['d.' + k]; return (d && S.cfg[k] === DEFAULTS[k]) ? d : S.cfg[k]; };
+function applyLang() {
+  document.documentElement.lang = lang;
+  $$('[data-i18n]').forEach(e => { e.textContent = t(e.dataset.i18n); });
+  $$('[data-i18n-ph]').forEach(e => { e.placeholder = t(e.dataset.i18nPh); });
+  $('#langSel').value = lang;
+}
+
 /* ---------------- state & helpers ---------------- */
 const S = { cfg: structuredClone(DEFAULTS), props: [], rates: { UGX: 1 }, display: 'asListed', f: { q: '', type: '', purpose: '', budget: '', sort: 'featured' }, loaded: false };
 const SYM = { UGX: 'UGX ', USD: '$', EUR: '€', GBP: '£', JPY: '¥' };
@@ -394,10 +433,10 @@ const mixWhite = (hex, t) => { const n = parseInt(hex.slice(1), 16); const m = c
 const lum = hex => { const n = parseInt(hex.slice(1), 16); return (0.299 * ((n >> 16) & 255) + 0.587 * ((n >> 8) & 255) + 0.114 * (n & 255)) / 255; };
 function priceParts(p) {
   const own = p.currency || 'UGX', d = S.display;
-  if (!p.price) return { main: 'Price on request', sub: '' };
+  if (!p.price) return { main: t('price.req'), sub: '' };
   const note = p.priceNote ? ` <small>${esc(p.priceNote)}</small>` : '';
   if (d === 'asListed' || d === own || !S.rates[own] || !S.rates[d]) return { main: money(p.price, own) + note, sub: '' };
-  return { main: '≈ ' + money(conv(p.price, own, d), d) + note, sub: 'Listed at ' + money(p.price, own) };
+  return { main: '≈ ' + money(conv(p.price, own, d), d) + note, sub: t('price.listed') + ' ' + money(p.price, own) };
 }
 function videoEmbed(url) {
   url = safeUrl(url); let m = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/);
@@ -422,13 +461,13 @@ async function prep(file, o = {}) {
 
 /* ---------------- apply site config ---------------- */
 function applyConfig() {
-  const c = S.cfg;
+  const c = S.cfg; applyLang();
   S.rates = { UGX: 1, ...(c.rates || {}) };
   const acc = /^#[0-9a-f]{6}$/i.test(c.accent) ? c.accent : DEFAULTS.accent;
   const r = document.documentElement.style; r.setProperty('--gold', acc); r.setProperty('--gold2', mixWhite(acc, .4)); r.setProperty('--ink', lum(acc) > .6 ? '#21172a' : '#ffffff');
   document.title = `${c.name} | Property Sales & Real Estate`;
   $('meta[name=description]').content = (c.heroSubtitle || '').slice(0, 155);
-  $$('[data-t]').forEach(e => { e.textContent = c[e.dataset.t] || ''; });
+  $$('[data-t]').forEach(e => { e.textContent = cfgText(e.dataset.t) || ''; });
   const letter = esc((c.name || 'E').trim().charAt(0).toUpperCase());
   $$('.brandlogo').forEach(e => { e.innerHTML = c.logoUrl ? `<img src="${esc(safeUrl(c.logoUrl))}" alt="${esc(c.name)} logo">` : letter; });
   $('#favicon').href = c.logoUrl ? safeUrl(c.logoUrl) : `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23231c33'/%3E%3Ctext x='32' y='43' font-size='34' text-anchor='middle' fill='${encodeURIComponent(acc)}' font-family='Georgia'%3E${letter}%3C/text%3E%3C/svg%3E`;
@@ -443,23 +482,29 @@ function applyConfig() {
   /* about */
   $('#aboutImg').style.backgroundImage = `url("${(safeUrl(c.aboutImageUrl) || img || '').replace(/"/g, '%22')}")`;
   /* services & faq */
-  $('#servicesGrid').innerHTML = lines(c.services).map(([t, d]) => `<article class="service"><div class="sico">${esc(t.charAt(0))}</div><h3>${esc(t)}</h3><p>${esc(d)}</p></article>`).join('');
-  $('#faqList').innerHTML = lines(c.faq).map(([q, a]) => `<details class="q"><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('');
-  $('#faq').hidden = !lines(c.faq).length;
+  $('#servicesGrid').innerHTML = lines(cfgText('services')).map(([t, d]) => `<article class="service"><div class="sico">${esc(t.charAt(0))}</div><h3>${esc(t)}</h3><p>${esc(d)}</p></article>`).join('');
+  $('#faqList').innerHTML = lines(cfgText('faq')).map(([q, a]) => `<details class="q"><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('');
+  $('#faq').hidden = !lines(cfgText('faq')).length;
+  /* why / testimonial / cta */
+  $('#whyGrid').innerHTML = lines(cfgText('why')).map(([ti, d], i) => `<article class="why"><div class="sico">${['♥', '✓', '⌖', '＄'][i % 4]}</div><h3>${esc(ti)}</h3><p>${esc(d)}</p></article>`).join('');
+  $('#why').hidden = !lines(cfgText('why')).length;
+  $('#testi').hidden = !(c.testimonialText || '').trim(); $('#tqText').textContent = c.testimonialText ? '“' + c.testimonialText + '”' : ''; $('#tqName').textContent = c.testimonialName || ''; $('#tqRole').textContent = c.testimonialRole || '';
+  $('#ctaWa').href = waLink(cfgText('waMessage'));
   /* contact */
   const items = [];
   if (c.phone) items.push(`<a href="tel:${esc(c.phone.replace(/[^\d+]/g, ''))}"><i>☎</i><span>${esc(c.phone)}</span></a>`);
-  if (waNum()) items.push(`<a href="${waLink(c.waMessage)}" target="_blank" rel="noopener"><i>✆</i><span>WhatsApp: +${esc(waNum())}</span></a>`);
+  if (waNum()) items.push(`<a href="${waLink(cfgText('waMessage'))}" target="_blank" rel="noopener"><i>✆</i><span>WhatsApp: +${esc(waNum())}</span></a>`);
   if (c.email) items.push(`<a href="mailto:${esc(c.email)}"><i>✉</i><span>${esc(c.email)}</span></a>`);
   if (c.address) items.push(`<div><i>⌖</i><span>${esc(c.address)}</span></div>`);
   if (c.hours) items.push(`<div><i>◷</i><span>${esc(c.hours)}</span></div>`);
   $('#clist').innerHTML = items.join('');
   const mf = $('#mapFrame'); if (c.address) { const src = 'https://maps.google.com/maps?q=' + encodeURIComponent(c.address) + '&output=embed'; if (mf.dataset.s !== src) { mf.dataset.s = src; mf.src = src; } mf.hidden = false; } else mf.hidden = true;
   const soc = [['facebook', 'Facebook'], ['instagram', 'Instagram'], ['tiktok', 'TikTok'], ['x', 'X'], ['youtube', 'YouTube']].filter(([k]) => safeUrl(c[k]));
-  $('#soc').innerHTML = soc.map(([k, n]) => `<a href="${esc(safeUrl(c[k]))}" target="_blank" rel="noopener">${n}</a>`).join('');
+  const socHtml = soc.map(([k, n]) => `<a href="${esc(safeUrl(c[k]))}" target="_blank" rel="noopener">${n}</a>`).join('');
+  $('#soc').innerHTML = socHtml; $('#fsoc').innerHTML = (waNum() ? `<a href="${waLink(cfgText('waMessage'))}" target="_blank" rel="noopener">${t('foot.wa')}</a>` : '') + socHtml;
   /* whatsapp */
   const wa = $('#waFloat'), on = c.waFloating !== false && !!waNum() && !isAdminRoute();
-  wa.hidden = !on; wa.href = waLink(c.waMessage); $('#heroWa').href = waLink(c.waMessage);
+  wa.hidden = !on; wa.href = waLink(cfgText('waMessage')); $('#heroWa').href = waLink(cfgText('waMessage'));
   if (!on) $('#waTip').hidden = true;
   else if (!applyConfig.tip) { applyConfig.tip = 1; $('#waTip').hidden = false; setTimeout(() => { $('#waTip').hidden = true; }, 9000); }
   $('#year').textContent = new Date().getFullYear();
@@ -480,20 +525,21 @@ function visibleProps() {
 }
 function cardHTML(p) {
   const pr = priceParts(p), closed = p.status && p.status !== 'Available', img = safeUrl((p.images || [])[0]) || PLACEHOLDER;
-  const meta = [p.type, p.bedrooms ? p.bedrooms + ' bed' : '', p.bathrooms ? p.bathrooms + ' bath' : '', p.size].filter(Boolean).map(x => `<span>${esc(x)}</span>`).join('');
+  const meta = [tv(p.type), p.bedrooms ? p.bedrooms + ' ' + t('bed') : '', p.bathrooms ? p.bathrooms + ' ' + t('bath') : '', p.size].filter(Boolean).map(x => `<span>${esc(x)}</span>`).join('');
   return `<article class="property${closed ? ' closed' : ''}"><div class="photo" data-open="${esc(p.id)}"><img src="${esc(img)}" alt="${esc(p.title)}" loading="lazy">
-    <span class="tag">${esc(p.purpose || 'For sale')}</span>${p.featured ? '<span class="tag feat">★ Featured</span>' : ''}${p.video ? '<span class="tag vid">▶ Video</span>' : ''}${closed ? `<div class="ribbon">${esc(p.status)}</div>` : ''}</div>
-    <div class="details"><div class="price">${pr.main}</div>${pr.sub ? `<div class="psub">${pr.sub}</div>` : ''}<h3>${esc(p.title)}</h3><div class="location">⌖ ${esc(p.location)}</div><div class="meta">${meta}</div>
-    <div class="cardact"><button class="btn outline" data-open="${esc(p.id)}">View details</button><a class="btn wa" target="_blank" rel="noopener" aria-label="WhatsApp about ${esc(p.title)}" href="${waLink('Hello, I would like more information about: ' + p.title)}"><svg class="ico-wa" viewBox="0 0 24 24"><use href="#waicon"/></svg></a></div></div></article>`;
+    <span class="tag">${esc(tv(p.purpose || 'For sale'))}</span>${p.featured ? `<span class="tag feat">${t('card.feat')}</span>` : ''}${p.video ? `<span class="tag vid">${t('card.video')}</span>` : ''}${closed ? `<div class="ribbon">${esc(tv(p.status))}</div>` : ''}</div>
+    <div class="details"><div class="price">${pr.main}</div>${pr.sub ? `<div class="psub">${pr.sub}</div>` : ''}<h3>${esc(p.title)}</h3><div class="location">⌖ ${esc(p.location)}</div><div class="meta">${meta}</div>${(p.features || []).length ? `<div class="amen">${p.features.slice(0, 4).map(f => `<span>${esc(f)}</span>`).join('')}</div>` : ''}
+    <div class="cardact"><button class="btn outline" data-open="${esc(p.id)}">${t('card.view')} →</button><a class="btn wa" target="_blank" rel="noopener" aria-label="WhatsApp about ${esc(p.title)}" href="${waLink(t('wa.hello') + ' ' + p.title)}"><svg class="ico-wa" viewBox="0 0 24 24"><use href="#waicon"/></svg></a></div></div></article>`;
 }
 function renderProps() {
   const a = visibleProps(), g = $('#propertyGrid');
   g.innerHTML = a.map(cardHTML).join('');
   $('#empty').style.display = (S.loaded && !a.length) ? 'block' : 'none';
-  $('#empty').textContent = S.loadErr ? 'We could not load properties right now. Please refresh, or contact us directly.' : (S.props.length ? 'No matching properties found. Try another search or contact us for assistance.' : 'New properties are being added. Contact us on WhatsApp to hear about current opportunities.');
+  $('#empty').textContent = S.loadErr ? t('empty.err') : (S.props.length ? t('empty.none') : t('empty.noprops'));
   $('#demoNote').hidden = !Store.demo;
   const all = S.props.filter(p => p.published !== false), types = [...new Set(all.map(p => p.type))];
-  $('#trust').innerHTML = all.length ? `<div><b>${all.length}</b>Properties listed</div>` + (types.length ? `<div><b>${types.length}</b>Property types</div>` : '') + '<div><b>24/7</b>WhatsApp enquiries</div>' : '';
+  $('#stats').hidden = !all.length;
+  $('#trust').innerHTML = all.length ? [[all.length, 'trust.props'], [types.length, 'trust.types'], ['24/7', 'trust.wa'], [5, 'trust.cur']].map(([n, k]) => `<div><b>${n}</b><span>${t(k)}</span></div>`).join('') : '';
 }
 $('#propertyGrid').addEventListener('click', e => { const t = e.target.closest('[data-open]'); if (t) openProp(t.dataset.open); });
 
@@ -505,21 +551,21 @@ function openProp(id, skipHash) {
   if (p.video) items.push({ t: 'v', u: p.video });
   if (!items.length) items.push({ t: 'i', u: PLACEHOLDER });
   gal = { items, i: 0 };
-  const facts = [['Type', p.type], ['Purpose', p.purpose], ['Status', p.status || 'Available'], ['Size', p.size], ['Bedrooms', p.bedrooms], ['Bathrooms', p.bathrooms]].filter(([, v]) => v !== null && v !== undefined && v !== '');
-  const msg = `Hello, I would like more information about: ${p.title} (${p.location})`;
+  const facts = [[t('f.type'), tv(p.type)], [t('f.purpose'), tv(p.purpose)], [t('f.status'), tv(p.status || 'Available')], [t('f.size'), p.size], [t('f.beds'), p.bedrooms], [t('f.baths'), p.bathrooms]].filter(([, v]) => v !== null && v !== undefined && v !== '');
+  const msg = `${t('wa.hello')} ${p.title} (${p.location})`;
   $('#mbody').innerHTML = `<div class="gal" id="galMain"></div><div class="thumbs" id="galThumbs"></div>
-  <div class="mcont"><div><div class="eyebrow">${esc(p.purpose || '')} · ${esc(p.type || '')}</div><h2>${esc(p.title)}</h2><div class="location" style="font-size:14px">⌖ ${esc(p.location)}</div>
+  <div class="mcont"><div><div class="eyebrow">${esc(tv(p.purpose || ''))} · ${esc(tv(p.type || ''))}</div><h2>${esc(p.title)}</h2><div class="location" style="font-size:14px">⌖ ${esc(p.location)}</div>
     <div class="facts">${facts.map(([k, v]) => `<div>${k}<b>${esc(v)}</b></div>`).join('')}</div>
-    ${p.description ? `<h4 style="margin:18px 0 6px">About this property</h4><p class="desc">${esc(p.description)}</p>` : ''}
-    ${(p.features || []).length ? `<h4 style="margin:18px 0 8px">Features</h4><div class="chips">${p.features.map(f => `<span>${esc(f)}</span>`).join('')}</div>` : ''}
-    ${p.location ? `<h4 style="margin:22px 0 8px">Location</h4><iframe class="map" loading="lazy" title="Map" src="https://maps.google.com/maps?q=${encodeURIComponent(p.location)}&output=embed"></iframe>` : ''}</div>
+    ${p.description ? `<h4 style="margin:18px 0 6px">${t('m.about')}</h4><p class="desc">${esc(p.description)}</p>` : ''}
+    ${(p.features || []).length ? `<h4 style="margin:18px 0 8px">${t('m.features')}</h4><div class="chips">${p.features.map(f => `<span>${esc(f)}</span>`).join('')}</div>` : ''}
+    ${p.location ? `<h4 style="margin:22px 0 8px">${t('m.location')}</h4><iframe class="map" loading="lazy" title="Map" src="https://maps.google.com/maps?q=${encodeURIComponent(p.location)}&output=embed"></iframe>` : ''}</div>
   <aside class="mside"><div class="price" style="font-size:26px">${pr.main}</div>${pr.sub ? `<div class="psub">${pr.sub}</div>` : ''}
-    <a class="btn wa" target="_blank" rel="noopener" href="${waLink(msg)}"><svg class="ico-wa" viewBox="0 0 24 24"><use href="#waicon"/></svg> Enquire on WhatsApp</a>
-    <a class="btn" href="tel:${esc((S.cfg.phone || '').replace(/[^\d+]/g, ''))}">☎ Call us</a>
-    <button class="btn outline" id="mEnq">✉ Send an enquiry</button><button class="btn outline" id="mShare">⤴ Share this property</button></aside></div>`;
+    <a class="btn wa" target="_blank" rel="noopener" href="${waLink(msg)}"><svg class="ico-wa" viewBox="0 0 24 24"><use href="#waicon"/></svg> ${t('m.wa')}</a>
+    <a class="btn" href="tel:${esc((S.cfg.phone || '').replace(/[^\d+]/g, ''))}">${t('m.call')}</a>
+    <button class="btn outline" id="mEnq">${t('m.enq')}</button><button class="btn outline" id="mShare">${t('m.share')}</button></aside></div>`;
   drawGal();
   $('#mEnq').onclick = () => { closeModal(); $('#enqProp').value = p.title; location.hash = '#contact'; };
-  $('#mShare').onclick = async () => { const url = location.origin + location.pathname + '#/p/' + p.id; try { if (navigator.share) await navigator.share({ title: p.title, url }); else { await navigator.clipboard.writeText(url); toast('Link copied'); } } catch { } };
+  $('#mShare').onclick = async () => { const url = location.origin + location.pathname + '#/p/' + p.id; try { if (navigator.share) await navigator.share({ title: p.title, url }); else { await navigator.clipboard.writeText(url); toast(t('m.copied')); } } catch { } };
   const m = $('#modal'); m.hidden = false; m.scrollTop = 0; document.body.style.overflow = 'hidden'; $('#mclose').focus();
   if (!skipHash) history.replaceState(null, '', '#/p/' + p.id);
 }
@@ -546,6 +592,7 @@ function readFilters() { S.f.q = $('#fq').value.toLowerCase().trim(); S.f.type =
 $('#fq').addEventListener('input', () => { readFilters(); renderProps(); });
 $('#fsort').addEventListener('change', e => { S.f.sort = e.target.value; renderProps(); });
 $('#curSel').addEventListener('change', e => { S.display = e.target.value; try { localStorage.setItem('el_cur', S.display); } catch { } renderProps(); if (!$('#modal').hidden) { const id = location.hash.slice(4); if (id) { const keep = gal.i; openProp(id, true); gal.i = keep; drawGal(); } } });
+$('#langSel').addEventListener('change', e => { lang = e.target.value; try { localStorage.setItem('el_lang', lang); } catch { } applyConfig(); renderProps(); if (!$('#modal').hidden) { const id = location.hash.slice(4); if (id) { const keep = gal.i; openProp(id, true); gal.i = keep; drawGal(); } } });
 const menu = $('#menu'), links = $('#navlinks');
 menu.onclick = () => { const o = links.classList.toggle('open'); menu.setAttribute('aria-expanded', o); };
 $$('a', links).forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
@@ -554,16 +601,16 @@ $('#enqForm').addEventListener('submit', async e => {
   e.preventDefault(); const f = e.target, err = $('#enqErr'); err.textContent = '';
   if (f.website.value) return; /* honeypot */
   const d = { name: f.name.value.trim(), phone: f.phone.value.trim(), email: f.email.value.trim(), message: f.message.value.trim(), propertyTitle: f.propertyTitle.value.trim(), propertyId: (S.props.find(p => p.title === f.propertyTitle.value.trim()) || {}).id || '', source: 'website' };
-  if (!d.name || !d.phone || !d.message) { err.textContent = 'Please fill in your name, phone and message.'; return; }
-  if (d.email && !/^\S+@\S+\.\S+$/.test(d.email)) { err.textContent = 'Please enter a valid email or leave it blank.'; return; }
-  const last = +(localStorage.getItem('el_last') || 0); if (Date.now() - last < 30000) { err.textContent = 'Please wait a moment before sending another enquiry.'; return; }
-  const b = $('#enqBtn'); b.disabled = true; b.textContent = 'Sending…';
+  if (!d.name || !d.phone || !d.message) { err.textContent = t('form.err1'); return; }
+  if (d.email && !/^\S+@\S+\.\S+$/.test(d.email)) { err.textContent = t('form.errEmail'); return; }
+  const last = +(localStorage.getItem('el_last') || 0); if (Date.now() - last < 30000) { err.textContent = t('form.wait'); return; }
+  const b = $('#enqBtn'); b.disabled = true; b.textContent = t('form.sending');
   try {
     await Store.createEnquiry(d); try { localStorage.setItem('el_last', Date.now()); } catch { }
     f.hidden = true; $('#enqOk').hidden = false;
     $('#enqWa').href = waLink(`Hello, I'm ${d.name}. ${d.message}${d.propertyTitle ? ' (Property: ' + d.propertyTitle + ')' : ''}`);
-  } catch (ex) { console.error(ex); err.textContent = 'Sorry, we could not send that. Please message us on WhatsApp instead.'; }
-  b.disabled = false; b.textContent = 'Send enquiry';
+  } catch (ex) { console.error(ex); err.textContent = t('form.fail'); }
+  b.disabled = false; b.textContent = t('form.send');
 });
 
 /* ================= ADMIN PANEL ================= */
@@ -774,7 +821,8 @@ function tabBrand() {
    ${['USD', 'EUR', 'GBP', 'JPY'].map(k => `<label class="l">1 ${k} = UGX<input class="fld" type="number" step="any" min="0" data-rate="${k}" value="${esc(c.rates?.[k] ?? DEFAULTS.rates[k])}"></label>`).join('')}
    <label class="l">Default display<select class="fld" data-k="displayCurrency"><option value="asListed">As listed</option>${CURS.map(k => `<option value="${k}"${c.displayCurrency === k ? ' selected' : ''}>${k}</option>`).join('')}</select></label></div></div>
   <div class="card"><h3>About us</h3><div class="fgrid">${kv('aboutTitle', 'Heading')}<span></span><label class="l full">Text<textarea class="fld" data-k="aboutText" style="min-height:140px">${esc(c.aboutText || '')}</textarea></label>${mediaField('aboutImageUrl', 'About image', 'image', 'branding', '')}</div></div>
-  <div class="card"><h3>Services & FAQ</h3><p class="sub">One item per line, written as <b>Title | Description</b> (for FAQ: <b>Question | Answer</b>).</p><div class="fgrid"><label class="l full">Services<textarea class="fld" data-k="services" style="min-height:170px">${esc(c.services || '')}</textarea></label><label class="l full">FAQ<textarea class="fld" data-k="faq" style="min-height:170px">${esc(c.faq || '')}</textarea></label></div></div>
+  <div class="card"><h3>Services & FAQ</h3><p class="sub">One item per line, written as <b>Title | Description</b> (for FAQ: <b>Question | Answer</b>).</p><div class="fgrid"><label class="l full">Services<textarea class="fld" data-k="services" style="min-height:170px">${esc(c.services || '')}</textarea></label><label class="l full">Why choose us <span class="hint">(4 items work best)</span><textarea class="fld" data-k="why" style="min-height:130px">${esc(c.why || '')}</textarea></label><label class="l full">FAQ<textarea class="fld" data-k="faq" style="min-height:170px">${esc(c.faq || '')}</textarea></label></div></div>
+  <div class="card"><h3>Client testimonial</h3><p class="sub">Optional. Only add a real review from a real client, with their permission. Leave blank to hide the section.</p><div class="fgrid"><label class="l full">Testimonial<textarea class="fld" data-k="testimonialText" maxlength="400" style="min-height:90px">${esc(c.testimonialText || '')}</textarea></label>${kv('testimonialName', 'Client name', 'maxlength="60"')}${kv('testimonialRole', 'Role / location', 'maxlength="60"')}</div></div>
   <div class="card"><h3>Social media</h3><p class="sub">Paste full links (https://…). Leave blank to hide.</p><div class="fgrid">${kv('facebook', 'Facebook')}${kv('instagram', 'Instagram')}${kv('tiktok', 'TikTok')}${kv('x', 'X (Twitter)')}${kv('youtube', 'YouTube')}</div></div>
   <div class="sticky" style="bottom:0;background:#0b0911;padding:14px 0"><span class="err" id="bferr" style="margin-right:auto;align-self:center"></span><button class="btn" id="bsave">Save changes</button></div></form>`);
   $$('[data-media]').forEach(initMedia);
@@ -832,7 +880,7 @@ function tabSetup() {
    <li><b>Firestore Database</b> → Create database. Add collection <b>admins</b> with a document whose <b>ID is the admin's email in lowercase</b> (add any field, e.g. role = admin).</li>
    <li>Paste the Firestore rules below into Firestore → Rules, then Publish. (Firebase Storage is <b>not</b> used, so the free plan is enough.)</li>
    <li><b>Videos & many photos:</b> create a free Cloudinary account, add an <b>unsigned upload preset</b>, and paste the cloud name and preset into <code>CLOUDINARY</code> near the top of the file. Without it, photos are saved small inside the database and videos must be pasted as YouTube/Vimeo/.mp4 links.</li>
-   <li>Host the file (Firebase Hosting is free and easy) and add the site's domain to Authentication → Settings → Authorized domains.</li></ol></div>
+   <li><b>Host it free on GitHub Pages:</b> on github.com create a repository (e.g. <code>realestate</code>), upload this file named <code>index.html</code>, then Settings → Pages → Branch: main → Save. Your site appears at <code>https://YOUR-USERNAME.github.io/realestate/</code>. Add <code>YOUR-USERNAME.github.io</code> in Firebase → Authentication → Settings → Authorized domains.</li></ol></div>
   <div class="card"><h3>Firestore rules</h3><pre class="code" id="r1">${esc(FS_RULES)}</pre><button class="btn outline sm" style="margin-top:10px" data-copy="r1">Copy</button></div>`);
   $('#so2').onclick = () => Store.logout();
   $('#pw')?.addEventListener('click', async () => { try { await Store.resetPassword(A.user.email); toast('Reset email sent'); } catch (e) { toast(e.message, true); } });
